@@ -1,0 +1,19 @@
+  all_lights_k:
+    name: Alla lampor
+    entities:
+      - switch.hall_hangande
+      - light.kok_diskbank
+      - switch.kok_bank
+      - switch.kok_fonster
+      - switch.sovrum_skrivbord
+      - light.sovrum_fonster
+      - switch.vardagsrum_golv
+      - switch.vardagsrum_hangande
+      - switch.vardagsrum_window
+
+  windows_k:
+    name: Fönster
+    entities:
+      - light.sovrum_fonster
+      - switch.kok_fonster
+      - switch.vardagsrum_window

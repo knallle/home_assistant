@@ -1,0 +1,54 @@
+- id: homekit_delayed_start
+  alias: HomeKit delayed start
+  trigger:
+    - platform: event
+      event_type: zwave.network_ready
+    - platform: event
+      event_type: zwave.network_complete
+    - platform: event
+      event_type: zwave.network_complete_some_dead
+  action:
+    - service: homekit.start
+
+- id: turn_on_the_lights_at_set_time
+  alias: Turn on the lights at a set time
+  trigger:
+    - platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation}}'
+      below: 0.0
+  condition:
+    - condition: time
+      after: '12:00:00'
+      before: '21:15:00'
+  action:
+    - service: homeassistant.turn_on
+      entity_id:
+        - group.windows_k
+
+- id: turn_off_the_lights_at_a_set_time
+  alias: Turn off the lights at a set time
+  trigger:
+    - platform: time
+      at: '21:30:00'
+  action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.all_lights_k
+
+- id: turn_off_media_bench_in_standby
+  alias: Turn off TV from standby
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.telldus_tzwp_102_plug_in_switch_power
+      value_template: '{{ state.attributes.power_consumption}}'
+      above: 1
+      below: 12
+      for:
+        hours: 0
+        minutes: 1
+        seconds: 0
+  action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - switch.telldus_tzwp_102_plug_in_switch_switch
