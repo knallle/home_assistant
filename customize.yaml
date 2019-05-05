@@ -1,0 +1,24 @@
+sun.sun:
+  hidden: true
+sensor.telldus_tzwp_102_plug_in_switch_voltage:
+  hidden: true
+sensor.telldus_tzwp_102_plug_in_switch_previous_reading:
+  hidden: true
+sensor.telldus_tzwp_102_plug_in_switch_current:
+  hidden: true
+zwave.telldus_tzwp_102_plug_in_switch:
+  hidden: true
+sensor.iphone_battery_level:
+  hidden: true
+sensor.iphone_battery_state:
+  hidden: true
+person.kalle_svensson:
+  hidden: true
+sensor.daylight_2:
+  hidden: true
+sensor.temperature_3:
+  friendly_name: Temp. sovrum
+sensor.humidity_4:
+  hidden: true
+sensor.pressure_5:
+  hidden: true
