@@ -17,3 +17,5 @@
       - light.sovrum_fonster
       - switch.kok_fonster
       - switch.vardagsrum_window
+      - switch.vardagsrum_hangande
+      - switch.hall_hangande
