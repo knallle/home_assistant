@@ -39,6 +39,29 @@
   trigger:
     - platform: time
       at: '21:30:00'
+  condition:
+    - condition: time
+      weekday:
+      - sun
+      - mon
+      - tue
+      - wed
+      - thu
+  action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.all_lights_k
+
+- id: turn_off_the_lights_at_a_set_time_weekend
+  alias: Turn off the lights at a set time on weekend
+  trigger:
+    - platform: time
+      at: '23:30:00'
+  condition:
+    - condition: time
+      weekday:
+      - fri
+      - sat
   action:
     - service: homeassistant.turn_off
       entity_id:
