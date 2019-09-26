@@ -10,6 +10,14 @@
   action:
     - service: homekit.start
 
+- id: homeassistant_scheduled_restart
+  alias: Restart homeassistant every night
+  trigger:
+    - platform: time
+      at: '03:00:00'
+  action:
+    - service: homeassistant.restart
+
 - id: turn_on_the_lights_at_set_time
   alias: Turn on the lights at a set time
   trigger:
