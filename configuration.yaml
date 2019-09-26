@@ -49,6 +49,11 @@ homekit:
       - switch
     exclude_entities:
       - light.dimma_kok_diskbank
+      - light.gaster_on
+      - light.gaster_off
+      - light.god_morgon
+      - light.godnatt_kompiz
+      - light.sovrumsfonstret
 
 # Enable iOS component
 ios:
