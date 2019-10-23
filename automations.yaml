@@ -1,13 +1,10 @@
 - id: homekit_delayed_start
   alias: HomeKit delayed start
   trigger:
-    - platform: event
-      event_type: zwave.network_ready
-    - platform: event
-      event_type: zwave.network_complete
-    - platform: event
-      event_type: zwave.network_complete_some_dead
+    - platform: homeassistant
+      event: start
   action:
+    - delay: '00:02:00'
     - service: homekit.start
 
 - id: homeassistant_scheduled_restart
