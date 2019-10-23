@@ -24,6 +24,8 @@ zone:
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+config:
+
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
 #   base_url: example.duckdns.org:8123
@@ -47,6 +49,8 @@ homekit:
     include_domains:
       - light
       - switch
+    include_entities:
+      - switch.telldus_tzwp_102_plug_in_switch_switch
     exclude_entities:
       - light.dimma_kok_diskbank
       - light.gaster_on
@@ -54,6 +58,12 @@ homekit:
       - light.god_morgon
       - light.godnatt_kompiz
       - light.sovrumsfonstret
+      - light.valkommen_hem
+      - light.light.gu10_tak_1
+      - light.light.gu10_tak_2
+      - light.light.gu10_tak_3
+      - light.light.gu10_tak_4
+      - light.light.gu10_tak_5
 
 # Enable iOS component
 ios:
