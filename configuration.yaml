@@ -52,18 +52,20 @@ homekit:
     include_entities:
       - switch.telldus_tzwp_102_plug_in_switch_switch
     exclude_entities:
-      - light.dimma_kok_diskbank
+      - light.kok_avlastningsbank
+      - light.kok_diskbank
+      - switch.kok_bank
       - light.gaster_on
       - light.gaster_off
       - light.god_morgon
       - light.godnatt_kompiz
       - light.sovrumsfonstret
       - light.valkommen_hem
-      - light.light.gu10_tak_1
-      - light.light.gu10_tak_2
-      - light.light.gu10_tak_3
-      - light.light.gu10_tak_4
-      - light.light.gu10_tak_5
+      - light.gu10_tak_1
+      - light.gu10_tak_2
+      - light.gu10_tak_3
+      - light.gu10_tak_4
+      - light.gu10_tak_5
 
 # Enable iOS component
 ios:

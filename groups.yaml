@@ -3,9 +3,11 @@
     entities:
       - switch.hall_hangande
       - light.kok_diskbank
-      - light.taklampa_vardagsrum
+      - light.kok_avlastningsbank
+      - light.kok_vitrinskap
       - switch.kok_bank
       - switch.kok_fonster
+      - light.taklampa_vardagsrum
       - switch.sovrum_skrivbord
       - light.sovrum_fonster
       - switch.vardagsrum_golv
